@@ -13,7 +13,7 @@ const BasicInformation: FunctionComponent<Props> = (props) => {
             <div className="basicInfoLabel bg-black text-xl font-bold text-center text-white py-2 mx-4 rounded-lg mb-4">
                 Basic Information
             </div>
-            <div className="basicInfo flex flex-wrap grid grid-cols-2 bg-white text-center text-black py-2 mx-4 rounded-lg mb-4">
+            <div className="basicInfo flex flex-wrap grid grid-cols-2 bg-white text-center text-black p-2 mx-4 rounded-lg mb-4">
                 <div className="flex-auto">
                     <div className="bscInflabel text-base font-bold">First Name</div>
                     <div className="bscInfFirstName text-sm">{props.firstName}</div>

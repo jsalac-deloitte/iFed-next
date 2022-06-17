@@ -3,6 +3,14 @@ import Image from "next/image";
 import BasicInformation from "./basicInformation"
 import Experience from "./experience"
 
+export type SkillObject = {
+    skillName: string;
+    skillLevel: SkillLevel
+}
+type ProfileStatus = "active" | "inactive" | "new"
+type ProfileGroup = "Digital Analytics" | "FED" | "Mobile" | "SFCC" | "Sitecore" | "UI/UX"
+type SkillLevel = "Beginner" | "Intermediate" | "Expert"
+
 interface Profile extends Experience {
     id: number;
     firstName: string;
@@ -17,12 +25,13 @@ interface Profile extends Experience {
 
 interface Experience {
     level: string;
-    skills: object[];
+    skills: SkillObject[];
     industries: string[];
 }
 
-type ProfileStatus = "active" | "inactive" | "new"
-type ProfileGroup = "Digital Analytics" | "FED" | "Mobile" | "SFCC" | "Sitecore" | "UI/UX"
+
+
+
 
 let currentUser: Profile = {
     id: 123,
@@ -34,7 +43,7 @@ let currentUser: Profile = {
     status: "active",
     level: "Analyst",
     image: "/img/George-costanza.jpg",
-    skills: [{ skillName: "Angular", skillLevel: 1 }, { skillName: "ReactJS", skillLevel: 1 }, { skillName: "HTML5", skillLevel: 2 }],
+    skills: [{ skillName: "Angular", skillLevel: "Beginner" }, { skillName: "ReactJS", skillLevel: "Beginner" }, { skillName: "HTML5", skillLevel: "Intermediate" }],
     industries: ["Architecture", "Sports", "Real Estate"]
 }
 
@@ -50,8 +59,8 @@ const UserProfile = () => {
                         className="rounded-full"
                         src={currentUser.image}
                         alt={currentUser.firstName + currentUser.lastName + ".png"}
-                        width="80"
-                        height="80"
+                        width="100"
+                        height="100"
                     />
                 </div>
                 <div className="profileName text-5xl font-bold text-center text-white">{currentUser.firstName}</div>
@@ -59,14 +68,14 @@ const UserProfile = () => {
             </div>
             <div className="profileInformation py-10 bg-slate-300">
                 <BasicInformation
-                    key={currentUser.id}
+                    key={currentUser.id+10}
                     firstName={currentUser.firstName}
                     lastName={currentUser.lastName}
                     email={currentUser.email}
                     contactNo={currentUser.contactNo}
                 />
                 <Experience
-                    key={currentUser.id}
+                    key={currentUser.id-10}
                     level={currentUser.level}
                     skills={currentUser.skills}
                     industries={currentUser.industries}

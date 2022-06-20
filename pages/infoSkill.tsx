@@ -8,7 +8,7 @@ const infoSkill: NextPage = () => {
       <div>
         <Navigation />
       </div>
-      <div className="bg-green-500 h-[72px]"></div>
+      <div className="bg-green-500 h-[70px]"></div>
       <main>
         <div className="lg:flex">
           <div className="flex  justify-center">

@@ -12,6 +12,9 @@ module.exports = {
       //   deloitteGreen: "#198754",
       //   lineGray: "#707377",
       // },
+      colors: {
+        globalcolor: "#E8EAE9",
+      },
     },
   },
   plugins: [],

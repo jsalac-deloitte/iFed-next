@@ -11,7 +11,7 @@ type ProfileStatus = "active" | "inactive" | "new"
 type ProfileGroup = "Digital Analytics" | "FED" | "Mobile" | "SFCC" | "Sitecore" | "UI/UX"
 type SkillLevel = "Beginner" | "Intermediate" | "Expert"
 
-interface Profile extends Experience {
+interface Profile {
     id: number;
     firstName: string;
     middleName?: string;
@@ -21,16 +21,10 @@ interface Profile extends Experience {
     email: string;
     status: ProfileStatus;
     image: string;
-}
-
-interface Experience {
     level: string;
     skills: SkillObject[];
     industries: string[];
 }
-
-
-
 
 
 let currentUser: Profile = {
@@ -41,12 +35,12 @@ let currentUser: Profile = {
     contactNo: "0917-123-4567",
     resourceGroup: "Digital Analytics",
     status: "active",
-    level: "Analyst",
     image: "/img/George-costanza.jpg",
+    //to be fetched
+    level: "Analyst",
     skills: [{ skillName: "Angular", skillLevel: "Beginner" }, { skillName: "ReactJS", skillLevel: "Beginner" }, { skillName: "HTML5", skillLevel: "Intermediate" }],
-    industries: ["Architecture", "Sports", "Real Estate"]
+    industries: ["Architecture", "Sports", "Real Estate", "Marine Biology"]
 }
-
 
 const UserProfile = () => {
     return (
@@ -66,7 +60,7 @@ const UserProfile = () => {
                 <div className="profileName text-5xl font-bold text-center text-white">{currentUser.firstName}</div>
                 <div className="profileName text-2xl font-bold text-center text-white">{currentUser.lastName}</div>
             </div>
-            <div className="profileInformation py-10 bg-slate-300">
+            <div className="profileInformation py-5 bg-slate-300">
                 <BasicInformation
                     key={currentUser.id+10}
                     firstName={currentUser.firstName}

@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 import Skill from "./skills"
-import { SkillObject } from "./userProfile";
+import { SkillObject } from "../userProfile";
 import Industry from "./industries"
 import Image from "next/image"
 

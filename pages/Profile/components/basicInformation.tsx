@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from "react";
 import Image from "next/image";
+import Button from "./Button";
 
 interface Props {
     key: number;
@@ -15,12 +16,17 @@ const BasicInformation: FunctionComponent<Props> = (props) => {
             <div className="basicInfoLabel bg-black text-xl font-bold text-center text-white py-2 mx-4 rounded-lg mb-4">
                 <div className="label text relative">
                     Basic Information
-                    <div className="editButton active:bg-gray-300 rounded-full w-1/6 invert absolute right-0 top-0">
+                   <Button
+                        handleClick={() => {
+                            console.log("Button Clicked")
+                        }}
+                   />
+                    <div className="saveButton invisible active:bg-gray-300 rounded-full w-1/6 invert absolute right-0 top-0">
                         <Image
-                            src={"/img/pencil.png"}
+                            src={"/img/save.png"}
                             alt={"edit.png"}
-                            width="15"
-                            height="15"
+                            width="20"
+                            height="20"
                         />
                     </div>
                 </div>
@@ -29,19 +35,19 @@ const BasicInformation: FunctionComponent<Props> = (props) => {
                 <div className="basicInfoText grid grid-cols-2">
                     <div className="flex-auto">
                         <div className="bscInflabel text-base font-bold">First Name</div>
-                        <div className="bscInfFirstName text-sm">{props.firstName}</div>
+                        <div className="bscInfFirstName text-sm">{props.firstName}<input className="updateFirstName" type="text" placeholder={props.firstName}></input></div>
                     </div>
                     <div className="flex-auto">
                         <div className="bscInflabel text-base font-bold">Last Name</div>
-                        <div className="bscInfFirstName text-sm">{props.lastName}</div>
+                        <div className="bscInfFirstName text-sm">{props.lastName}<input className="updateLastName" type="text" placeholder={props.lastName}></input></div>
                     </div>
                     <div className="flex-auto">
                         <div className="bscInflabel text-base font-bold">Email Adress</div>
-                        <div className="bscInfFirstName text-sm">{props.email}</div>
+                        <div className="bscInfFirstName text-sm">{props.email}<input className="updateEmail" type="text" placeholder={props.email}></input></div>
                     </div>
                     <div className="flex-auto">
                         <div className="bscInflabel text-base font-bold">Contact Number</div>
-                        <div className="bscInfFirstName text-sm">{props.contactNo}</div>
+                        <div className="bscInfFirstName text-sm">{props.contactNo}<input className="updateContactNo" type="text" placeholder={props.contactNo}></input></div>
                     </div>
                 </div>
             </div>

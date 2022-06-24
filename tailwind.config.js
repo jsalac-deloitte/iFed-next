@@ -6,15 +6,18 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "mobile-skill": "url('../public/assets/images/shared/mobile_meta.png')",
+        "tablet-skill": "url('../public/assets/images/shared/tablet_meta.png')",
+        "desktop-skill":
+          "url('../public/assets/images/shared/desktop_meta.png')",
+      },
       // colors: {
       //   color1: "#393939",
       //   color2: "#BBBCBC",
       //   deloitteGreen: "#198754",
       //   lineGray: "#707377",
       // },
-      colors: {
-        globalcolor: "#E8EAE9",
-      },
     },
   },
   plugins: [],

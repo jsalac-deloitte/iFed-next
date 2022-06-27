@@ -1,5 +1,4 @@
 import React, { FunctionComponent } from "react";
-import Image from "next/image";
 import Button from "./Button";
 
 interface Props {
@@ -7,47 +6,92 @@ interface Props {
     firstName: string;
     lastName: string;
     email: string;
-    contactNo: string
+    contactNo: string;
 }
 
 const BasicInformation: FunctionComponent<Props> = (props) => {
+
+    const [hideFirstName, setHideFirstName] = React.useState(false);
+    const [hideLastName, setHideLastName] = React.useState(false);
+    const [hideEmail, setHideEmail] = React.useState(false);
+    const [hideContact, setHideContact] = React.useState(false);
+    const [hideEdit, setHideEdit] = React.useState(false);
+
+    const editClick = () => {
+        setHideFirstName(true);
+        setHideLastName(true);
+        setHideEmail(true);
+        setHideContact(true);
+        setHideEdit(true);
+
+    }
+    const handleFirstName = () => {
+        return (
+            hideFirstName ? <input className="updateFirstName px-1 border border-slate-500 border-solid rounded-sm" type="text" placeholder={props.firstName} />
+                : <div>{props.firstName}</div>
+        )
+    }
+    const handleLastName = () => {
+        return (
+            hideLastName ? <input className="updateLastName px-1 border border-slate-500 border-solid rounded-sm" type="text" placeholder={props.lastName} />
+                : <div>{props.lastName}</div>
+        )
+    }
+    const handleEmail = () => {
+        return (
+            hideEmail ? <input className="updateEmail px-1 border border-slate-500 border-solid rounded-sm" type="text" placeholder={props.email} />
+                : <div>{props.email}</div>
+        )
+    }
+    const handleContact = () => {
+        return (
+            hideContact ? <input className="updateContactNo px-1 border border-slate-500 border-solid rounded-sm" type="text" placeholder={props.contactNo} />
+                : <div>{props.contactNo}</div>
+        )
+    }
+    const handleButton = () => {
+        return (
+            hideEdit ?
+                <Button
+                    handleClick={(event) => {
+                        editClick();
+                    }}
+                    img={"/img/save.png"}
+                />
+                :
+                <Button
+                    handleClick={(event) => {
+                        editClick();
+                    }}
+                    img={"/img/pencil.png"}
+                />
+        )
+    }
     return (
         <>
             <div className="basicInfoLabel bg-black text-xl font-bold text-center text-white py-2 mx-4 rounded-lg mb-4">
                 <div className="label text relative">
                     Basic Information
-                   <Button
-                        handleClick={() => {
-                            console.log("Button Clicked")
-                        }}
-                   />
-                    <div className="saveButton invisible active:bg-gray-300 rounded-full w-1/6 invert absolute right-0 top-0">
-                        <Image
-                            src={"/img/save.png"}
-                            alt={"edit.png"}
-                            width="20"
-                            height="20"
-                        />
-                    </div>
+                    {handleButton()}
                 </div>
             </div>
             <div className="basicInfo flex flex-col bg-white text-center text-black p-2 mx-4 rounded-lg mb-4">
                 <div className="basicInfoText grid grid-cols-2">
                     <div className="flex-auto">
-                        <div className="bscInflabel text-base font-bold">First Name</div>
-                        <div className="bscInfFirstName text-sm">{props.firstName}<input className="updateFirstName" type="text" placeholder={props.firstName}></input></div>
+                        <div className="bscInfLabel text-base font-bold">First Name</div>
+                        <div className="bscInfFirstName text-sm">{handleFirstName()}</div>
                     </div>
                     <div className="flex-auto">
-                        <div className="bscInflabel text-base font-bold">Last Name</div>
-                        <div className="bscInfFirstName text-sm">{props.lastName}<input className="updateLastName" type="text" placeholder={props.lastName}></input></div>
+                        <div className="bscInfLabel text-base font-bold">Last Name</div>
+                        <div className="bscInfFirstName text-sm">{handleLastName()}</div>
                     </div>
                     <div className="flex-auto">
-                        <div className="bscInflabel text-base font-bold">Email Adress</div>
-                        <div className="bscInfFirstName text-sm">{props.email}<input className="updateEmail" type="text" placeholder={props.email}></input></div>
+                        <div className="bscInfLabel text-base font-bold">Email Adress</div>
+                        <div className="bscInfFirstName text-sm">{handleEmail()}</div>
                     </div>
                     <div className="flex-auto">
-                        <div className="bscInflabel text-base font-bold">Contact Number</div>
-                        <div className="bscInfFirstName text-sm">{props.contactNo}<input className="updateContactNo" type="text" placeholder={props.contactNo}></input></div>
+                        <div className="bscInfLabel text-base font-bold">Contact Number</div>
+                        <div className="bscInfFirstName text-sm">{handleContact()}</div>
                     </div>
                 </div>
             </div>

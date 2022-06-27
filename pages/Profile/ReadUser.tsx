@@ -26,7 +26,6 @@ interface Profile {
     industries: string[];
 }
 
-
 let currentUser: Profile = {
     id: 123,
     firstName: "George",
@@ -46,7 +45,7 @@ const UserProfile = () => {
     return (
         <>
             <div className="profileBanner py-10 bg-black bg-no-repeat bg-cover bg-blend-screen" style={{
-                backgroundImage: "url(/img/profile-bg.png)",
+                backgroundImage: "url(/img/Profile/profile-bg.png)",
             }}>
                 <div className="profileImage text-center">
                     <Image
@@ -60,7 +59,7 @@ const UserProfile = () => {
                 <div className="profileName text-5xl font-bold text-center text-white">{currentUser.firstName}</div>
                 <div className="profileName text-2xl font-bold text-center text-white">{currentUser.lastName}</div>
             </div>
-            <div className="profileInformation py-5 bg-slate-300">
+            <div className="profileInformation py-5 bg-slate-300 flex flex-col justify-center grow">
                 <BasicInformation
                     key={currentUser.id+10}
                     firstName={currentUser.firstName}

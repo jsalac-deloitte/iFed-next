@@ -59,7 +59,7 @@ const UserProfile = () => {
                 <div className="profileName text-5xl font-bold text-center text-white">{currentUser.firstName}</div>
                 <div className="profileName text-2xl font-bold text-center text-white">{currentUser.lastName}</div>
             </div>
-            <div className="profileInformation py-5 bg-slate-300 flex flex-col justify-center grow">
+            <div className="profileInformation py-5 bg-slate-300 flex flex-col grow">
                 <BasicInformation
                     key={currentUser.id+10}
                     firstName={currentUser.firstName}

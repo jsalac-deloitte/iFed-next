@@ -69,13 +69,13 @@ const BasicInformation: FunctionComponent<Props> = (props) => {
     }
     return (
         <>
-            <div className="basicInfoLabel bg-black text-xl font-bold text-center text-white py-2 mx-4 md:mx-20 lg:mx-40 max-w-3xl rounded-lg mb-4">
+            <div className="basicInfoLabel bg-black text-xl font-bold text-center text-white py-2 mx-4 md:mx-auto md:w-6/12 rounded-lg mb-4">
                 <div className="label text relative">
                     Basic Information
                     {handleButton()}
                 </div>
             </div>
-            <div className="basicInfo flex flex-col bg-white text-center text-black p-2 mx-4 md:mx-20 lg:mx-40 max-w-3xl rounded-lg mb-4">
+            <div className="basicInfo flex flex-col bg-white text-center text-black p-2 mx-4 md:mx-auto md:w-6/12 rounded-lg mb-4">
                 <div className="basicInfoText grid grid-cols-2">
                     <div className="flex-auto">
                         <div className="bscInfLabel text-base font-bold">First Name</div>

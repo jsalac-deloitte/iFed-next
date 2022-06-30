@@ -1,5 +1,6 @@
 import React from "react";
 import API from "../api/api";
+import Link from "next/link";
 
 const CreateUser = () => {
     const apiClick = () => {
@@ -34,6 +35,9 @@ const CreateUser = () => {
                 </label>
             </form>
             <button onClick={apiClick}>test</button>
+            <Link href="/Profile/ReadUser">
+                <a>Home</a>
+            </Link>
         </>
     )
 }

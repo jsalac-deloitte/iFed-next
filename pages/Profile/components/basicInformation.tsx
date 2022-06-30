@@ -56,14 +56,14 @@ const BasicInformation: FunctionComponent<Props> = (props) => {
                     handleClick={(event) => {
                         editClick();
                     }}
-                    img={"/img/save.png"}
+                    img={"/img/Profile/save.png"}
                 />
                 :
                 <Button
                     handleClick={(event) => {
                         editClick();
                     }}
-                    img={"/img/pencil.png"}
+                    img={"/img/Profile/pencil.png"}
                 />
         )
     }

@@ -13,7 +13,12 @@ interface Props {
 }
 
 const Experience: FunctionComponent<Props> = (props) => {
-
+    
+    const levels = [
+        { value: "analyst", label: "Analyst" },
+        { value: "consultant", label: "Consultant" },
+        { value: "manager", label: "Manager" }
+    ]
     const skills = [
         { value: "angular", label: "Angular" },
         { value: "html", label: "HTML" }
@@ -23,6 +28,8 @@ const Experience: FunctionComponent<Props> = (props) => {
         { value: "architecture", label: "Architecture" },
         { value: "marinebiology", label: "Marine Biology" }
     ]
+
+
 
     const [hideLevel, setHideLevel] = React.useState(false);
     const [hideSkills, setHideSkills] = React.useState(false);
@@ -39,12 +46,11 @@ const Experience: FunctionComponent<Props> = (props) => {
     const handleLevel = () => {
         return (
             hideLevel ?
-                <select className="updateLevel px-1 border border-slate-500 border-solid rounded-sm" placeholder={props.level}>
-                    <option>Analyst</option>
-                    <option>Consultant</option>
-                    <option>Manager</option>
-                    <option>Senior Manager</option>
-                </select>
+                <div className="mb-3">
+                    <Select
+                        options={levels}
+                    />
+                </div>
                 :
                 <div>{props.level}</div>
         )
@@ -97,7 +103,6 @@ const Experience: FunctionComponent<Props> = (props) => {
                     <Select
                         options={industries}
                         isMulti
-
                     />
                 </div>
 
@@ -120,7 +125,7 @@ const Experience: FunctionComponent<Props> = (props) => {
                     {handleButton()}
                 </div>
             </div>
-            <div className="basicInfo bg-white text-center text-black p-2 mx-4 md:mx-auto md:w-6/12 rounded-lg mb-4">
+            <div className="basicInfo bg-white text-center text-black p-5 mx-4 md:mx-auto md:w-6/12 rounded-lg mb-4">
                 <div className="explabel text-base font-bold">Level</div>
                 <div className="expLevel text-sm mb-3">{handleLevel()}</div>
                 <div className="explabel text-base font-bold">Skills</div>

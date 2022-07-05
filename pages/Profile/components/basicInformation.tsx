@@ -75,7 +75,7 @@ const BasicInformation: FunctionComponent<Props> = (props) => {
                     {handleButton()}
                 </div>
             </div>
-            <div className="basicInfo flex flex-col bg-white text-center text-black p-2 mx-4 md:mx-auto md:w-6/12 rounded-lg mb-4">
+            <div className="basicInfo flex flex-col bg-white text-center text-black p-5 mx-4 md:mx-auto md:w-6/12 rounded-lg mb-4">
                 <div className="basicInfoText grid grid-cols-2">
                     <div className="flex-auto">
                         <div className="bscInfLabel text-base font-bold">First Name</div>

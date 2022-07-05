@@ -1,7 +1,7 @@
 import React from "react";
 import { MdAddCircleOutline, MdEdit, MdDeleteForever } from "react-icons/md";
-import { data } from "./Constant";
-const Industry_content = () => {
+import { data } from "../../../Constant";
+const Test2Skilss = () => {
   return (
     <div className="">
       <div className="md:flex md:flex-row md:items-center md:justify-center lg:ml-[80px]">
@@ -14,7 +14,7 @@ const Industry_content = () => {
 
         <div className="bg-[#BBBCBC] md:mt-8  md:w-[375px] md:h-[109px] md:rounded-r-[10px]  ">
           <p className="pt-[20px] pl-[50px] text-[20px]">
-            Add new <span>{data[0].kind}</span>
+            Add new <span>{data[2].kind}</span>
           </p>
           <div className="flex justify-between px-[50px] py-[20px] md:pt-2">
             <input
@@ -92,4 +92,4 @@ const Industry_content = () => {
   );
 };
 
-export default Industry_content;
+export default Test2Skilss;

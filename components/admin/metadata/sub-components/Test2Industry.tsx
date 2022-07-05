@@ -1,7 +1,7 @@
 import React from "react";
 import { MdAddCircleOutline, MdEdit, MdDeleteForever } from "react-icons/md";
-import { data } from "./Constant";
-const Industry_content = () => {
+import { data } from "../../../Constant";
+const Test2Industry = () => {
   return (
     <div className="">
       <div className="md:flex md:flex-row md:items-center md:justify-center lg:ml-[80px]">
@@ -32,7 +32,9 @@ const Industry_content = () => {
       <div className="mt-[20px] mx-auto px-[15px] py-[20px] w-[280px] bg-white  rounded-[10px] md:w-[560px] md:h-[344px] md:mt-[50px]">
         <p className="pl-[10px] pb-[25px] bold text-[16px]">List</p>
         <div className="py-[10px] border-solid border-b border-gray-500 flex justify-between">
-          <span className="pl-[10px] text-[12px] text-[#53565A]">Analyst</span>
+          <span className="pl-[10px] text-[12px] text-[#53565A]">
+            Analyst joseph
+          </span>
           <div className="mr-[10px] w-[75px] flex justify-between">
             <button className="bg-[#0D6EFD] flex items-center text-white text-[6px] md:rounded-[25px] rounded-l-[25px]  cursor-pointer md:-[64px] md:h-[20px] md:text-[12px] md:-ml-8">
               <span className="ml-[7px] mr-[3px] ">Edit</span>
@@ -75,7 +77,7 @@ const Industry_content = () => {
           </div>
         </div>
         <div className="py-[10px] border-solid border-b border-lineGray flex justify-between">
-          <span className="pl-[10px] text-[12px] text-[#53565A]">Manager</span>
+          <span className="pl-[10px] text-[12px] text-[#53565A]">Managers</span>
           <div className="mr-[10px] w-[75px] flex justify-between">
             <button className="bg-[#0D6EFD] flex items-center text-white text-[6px] md:rounded-[25px] rounded-l-[25px] cursor-pointer md:h-[20px] md:text-[12px] md:-ml-8">
               <span className="ml-[7px] mr-[3px]">Edit</span>
@@ -92,4 +94,4 @@ const Industry_content = () => {
   );
 };
 
-export default Industry_content;
+export default Test2Industry;

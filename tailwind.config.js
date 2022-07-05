@@ -7,10 +7,12 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "mobile-skill": "url('../public/assets/images/shared/mobile_meta.png')",
-        "tablet-skill": "url('../public/assets/images/shared/tablet_meta.png')",
+        "mobile-skill":
+          "url('../public/assets/images/admin/metadata/mobile_meta.png')",
+        "tablet-skill":
+          "url('../public/assets/images/admin/metadata/tablet_meta.png')",
         "desktop-skill":
-          "url('../public/assets/images/shared/desktop_meta.png')",
+          "url('../public/assets/images/admin/metadata/desktop_meta.png')",
       },
       // colors: {
       //   color1: "#393939",

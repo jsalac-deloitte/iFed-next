@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
-import Navigation from "../components/Navigation";
-import Industry_content from "../components/Industry_content";
-import Level_content from "../components/Level_content";
+import Navigation from "../../../components/Navigation";
+import Industry_content from "../../../components/Industry_content";
+import Level_content from "../../../components/Level_content";
 
 import React, { useState, FunctionComponent } from "react";
 

@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
-import Navigation from "../components/Navigation";
+import Navigation from "../../../components/Navigation";
 import { MdAddCircleOutline, MdEdit, MdDeleteForever } from "react-icons/md";
-import { data } from "../components/Constant";
+import { data } from "../../../components/Constant";
 import { FunctionComponent, useState } from "react";
-import Industry_content from "../components/Industry_content";
-import Level_content from "../components/Level_content";
-import Skills_content from "../components/Skills_content";
+import Industry_content from "../../../components/Industry_content";
+import Level_content from "../../../components/Level_content";
+import Skills_content from "../../../components/Skills_content";
 
 const InfoSkill: FunctionComponent = () => {
   const [displayIndustry, setDisplayIndustry] = useState(true);

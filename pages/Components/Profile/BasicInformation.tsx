@@ -11,6 +11,7 @@ interface Props {
 
 const BasicInformation: FunctionComponent<Props> = (props) => {
 
+    //dynamic editing of fields here
     const [hideFirstName, setHideFirstName] = React.useState(false);
     const [hideLastName, setHideLastName] = React.useState(false);
     const [hideEmail, setHideEmail] = React.useState(false);
@@ -56,14 +57,14 @@ const BasicInformation: FunctionComponent<Props> = (props) => {
                     handleClick={(event) => {
                         editClick();
                     }}
-                    img={"/img/Profile/save.png"}
+                    img={"/assets/images/Profile/save.png"}
                 />
                 :
                 <Button
                     handleClick={(event) => {
                         editClick();
                     }}
-                    img={"/img/Profile/pencil.png"}
+                    img={"/assets/images/Profile/edit.png"}
                 />
         )
     }

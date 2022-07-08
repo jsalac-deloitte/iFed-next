@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 import Skill from "./Skills";
-import { SkillObject } from "../ReadUser";
+import { SkillObject } from "../../Pages/Profile/ReadUser";
 import Industry from "./Industries";
 import Select from "react-select";
 import Button from "./Button";
@@ -13,17 +13,25 @@ interface Props {
 }
 
 const Experience: FunctionComponent<Props> = (props) => {
-    
+
+    //data to be fetched from meta data
     const levels = [
         { value: "analyst", label: "Analyst" },
         { value: "consultant", label: "Consultant" },
         { value: "manager", label: "Manager" }
     ]
+
+    //data to be fetched from meta data
     const skills = [
-        { value: "angular", label: "Angular" },
-        { value: "html", label: "HTML" }
+        { value: "angular", level: "beginner", label: "Angular | Beginner" },
+        { value: "angular", level: "intermediate", label: "Angular | Intermediate" },
+        { value: "angular", level: "expert", label: "Angular | Expert" },
+        { value: "html", level: "beginner", label: "HTML | Beginner" },
+        { value: "html", level: "intermediate", label: "HTML | Intermediate" },
+        { value: "html", level: "expert", label: "HTML | Expert" }
     ]
 
+    //data to be fetched from meta data
     const industries = [
         { value: "architecture", label: "Architecture" },
         { value: "marinebiology", label: "Marine Biology" }
@@ -62,14 +70,14 @@ const Experience: FunctionComponent<Props> = (props) => {
                     handleClick={(event) => {
                         editClick();
                     }}
-                    img={"/img/Profile/save.png"}
+                    img={"/assets/images/Profile/save.png"}
                 />
                 :
                 <Button
                     handleClick={(event) => {
                         editClick();
                     }}
-                    img={"/img/Profile/pencil.png"}
+                    img={"/assets/images/Profile/edit.png"}
                 />
         )
     }

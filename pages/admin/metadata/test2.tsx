@@ -7,8 +7,9 @@ import { MdAddCircleOutline } from "react-icons/md";
 import Test2Industry from "../../../components/admin/metadata/sub-components/Test2Industry";
 import Test2Levels from "../../../components/admin/metadata/sub-components/Test2Levels";
 import Test2Skilss from "../../../components/admin/metadata/sub-components/Test2Skills";
+import { NextPage } from "next";
 
-const ProfessionalLevel: React.FC = () => {
+const ProfessionalLevel: NextPage = () => {
   const [industry, setIndustry] = useState<string>("");
   const [dataList, setDataList] = useState<Iindustry[]>([]);
 
@@ -72,6 +73,7 @@ const ProfessionalLevel: React.FC = () => {
   return (
     <div>
       <Navigation />
+      <div className="bg-mobile-skill md:bg-tablet-skill md:h-[148px] lg:bg-desktop-skill lg:h-[277px]  lg:bg-cover  bg-blue-50  h-[70px]"></div>
       <main>
         <div className="lg:flex">
           <div className="flex  justify-center">
@@ -115,7 +117,7 @@ const ProfessionalLevel: React.FC = () => {
         <div className={displaySkills === true ? "block" : "hidden"}>
           <Test2Skilss />
         </div>
-        <div className="bg-mid mt-[20px]">
+        {/* <div className="bg-mid mt-[20px]">
           <p className="pt-[20px] pl-[50px] text-[16px]">Add Industry</p>
           <div>
             <div className="flex justify-between px-[50px] py-[20px]">
@@ -129,16 +131,16 @@ const ProfessionalLevel: React.FC = () => {
               ></input>
               <button
                 onClick={addIndustry}
-                className="bg-deloitteGreen flex items-center text-white text-[12px] rounded-[25px] cursor-pointer"
+                className="bg-deloitteGreen flex items-center text-black text-[12px] rounded-[25px] cursor-pointer"
               >
-                <span className="ml-[15px] mr-[3px]">Add</span>{" "}
+                <span className="ml-[15px] mr-[3px]">Add</span>
                 <MdAddCircleOutline className="w-[20px] h-[20px] my-[5px] mr-[15px]" />
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <div>
+        {/* <div>
           {dataList.map((industry: Iindustry, key: number) => {
             return (
               <Industrytest2
@@ -148,7 +150,7 @@ const ProfessionalLevel: React.FC = () => {
               />
             );
           })}
-        </div>
+        </div> */}
       </main>
     </div>
   );

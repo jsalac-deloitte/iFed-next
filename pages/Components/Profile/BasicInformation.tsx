@@ -11,6 +11,7 @@ interface Props {
 
 const BasicInformation: FunctionComponent<Props> = (props) => {
 
+    //dynamic editing of fields here
     const [hideFirstName, setHideFirstName] = React.useState(false);
     const [hideLastName, setHideLastName] = React.useState(false);
     const [hideEmail, setHideEmail] = React.useState(false);
@@ -56,14 +57,14 @@ const BasicInformation: FunctionComponent<Props> = (props) => {
                     handleClick={(event) => {
                         editClick();
                     }}
-                    img={"/img/Profile/save.png"}
+                    img={"/assets/images/Profile/save.png"}
                 />
                 :
                 <Button
                     handleClick={(event) => {
                         editClick();
                     }}
-                    img={"/img/Profile/pencil.png"}
+                    img={"/assets/images/Profile/edit.png"}
                 />
         )
     }
@@ -75,7 +76,7 @@ const BasicInformation: FunctionComponent<Props> = (props) => {
                     {handleButton()}
                 </div>
             </div>
-            <div className="basicInfo flex flex-col bg-white text-center text-black p-2 mx-4 md:mx-auto md:w-6/12 rounded-lg mb-4">
+            <div className="basicInfo flex flex-col bg-white text-center text-black p-5 mx-4 md:mx-auto md:w-6/12 rounded-lg mb-4">
                 <div className="basicInfoText grid grid-cols-2">
                     <div className="flex-auto">
                         <div className="bscInfLabel text-base font-bold">First Name</div>

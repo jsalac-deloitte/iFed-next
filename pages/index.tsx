@@ -2,14 +2,14 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import UserProfile from './Profile/userProfile'
-import CreateUser from './Profile/createUser'
+import UserProfile from './Pages/Profile/ReadUser'
+import CreateUser from './Pages/Profile/CreateUser'
+import ReadUser from './Pages/Profile/ReadUser'
 
 const Home: NextPage = () => {
   return (
     <>
-      <CreateUser />
-      <UserProfile />
+      <ReadUser />
     </>
 
   )

@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import { SkillObject } from "../../Pages/Profile/ReadUser";
+import { SkillObject } from "../../pages/Profile/ReadUser";
 
 interface Props {
     key: number;

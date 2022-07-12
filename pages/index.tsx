@@ -3,9 +3,9 @@ import Head from 'next/head'
 
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import UserProfile from './Profile/ReadUser'
-import CreateUser from './Profile/CreateUser'
-import ReadUser from './Profile/ReadUser'
+import UserProfile from './profile/ReadUser'
+import CreateUser from './profile/CreateUser'
+import ReadUser from './profile/ReadUser'
 
 import AccentBar from '../components/AccentBar'
 import Form from '../components/Form'

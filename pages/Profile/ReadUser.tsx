@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import BasicInformation from "../../Components/Profile/BasicInformation";
-import Experience from "../../Components/Profile/Experience";
+import BasicInformation from "../../components/profile/BasicInformation";
+import Experience from "../../components/profile/Experience";
 
 export type SkillObject = {
     skillName: string;
@@ -45,7 +45,7 @@ const UserProfile = () => {
     return (
         <>
             <div className="profileBanner py-10 bg-black bg-no-repeat bg-cover bg-blend-screen flex flex-col md:flex-row md:py-5" style={{
-                backgroundImage: "url(/assets/images/Profile/profile-bg.png)",
+                backgroundImage: "url(/assets/images/Profile/background-profile-tablet.png)",
             }}>
                 <div className="profileImage h-23 w-32 max-w-[250px] md:h-auto mx-auto md:order-last md:basis-1/4 md:my-auto md:py-5 md:mr-24 lg:mr-32">
                     <Image

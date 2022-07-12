@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import BasicInformation from "../../Components/Profile/BasicInformation";
-import Experience from "../../Components/Profile/Experience";
+import BasicInformation from "../../components/Profile/BasicInformation";
+import Experience from "../../components/Profile/Experience";
 
 export type SkillObject = {
     skillName: string;

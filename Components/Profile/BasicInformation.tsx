@@ -57,14 +57,14 @@ const BasicInformation: FunctionComponent<Props> = (props) => {
                     handleClick={(event) => {
                         editClick();
                     }}
-                    img={"/assets/images/Profile/save.png"}
+                    img={"/assets/images/profile/profile-save.png"}
                 />
                 :
                 <Button
                     handleClick={(event) => {
                         editClick();
                     }}
-                    img={"/assets/images/Profile/edit.png"}
+                    img={"/assets/images/Profile/profile-edit.png"}
                 />
         )
     }

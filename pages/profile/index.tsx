@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import BasicInformation from "../../components/profile/BasicInformation";
 import Experience from "../../components/profile/Experience";
+import Navbar from '../../components/shared/Navbar'
 
 export type SkillObject = {
     skillName: string;
@@ -44,6 +45,7 @@ let currentUser: Profile = {
 const UserProfile = () => {
     return (
         <>
+            <Navbar/>
             <div className="profileBanner py-10 bg-black bg-no-repeat bg-cover bg-blend-screen flex flex-col md:flex-row md:py-5" style={{
                 backgroundImage: "url(/assets/images/Profile/background-profile-tablet.png)",
             }}>

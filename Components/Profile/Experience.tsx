@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 import Skill from "./Skills";
-import { SkillObject } from "../../pages/profile/ReadUser";
+import { SkillObject } from "../../pages/profile";
 import Industry from "./Industries";
 import Select from "react-select";
 import Button from "./Button";

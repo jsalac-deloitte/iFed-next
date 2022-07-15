@@ -1,11 +1,11 @@
-import Navigation from "../../../components/admin/metadata/industry/test/Navigation";
 import React, { useState, ChangeEvent } from "react";
-import { Iindustry } from "../../../Interfaces/Interface/interface";
+import { Iindustry } from "../../../Interfaces/Interface/interfaceIndustry";
 
 import Test2Industry from "../../../components/admin/metadata/subcomponents/Test2Industry";
 import Test2Levels from "../../../components/admin/metadata/subcomponents/Test2Levels";
 import Test2Skilss from "../../../components/admin/metadata/subcomponents/Test2Skills";
 import { NextPage } from "next";
+import Navbar from "../../../components/shared/Navbar";
 
 const ProfessionalLevel: NextPage = () => {
   const [industry, setIndustry] = useState<string>("");
@@ -70,7 +70,7 @@ const ProfessionalLevel: NextPage = () => {
 
   return (
     <div>
-      <Navigation />
+      <Navbar />
       <div className="bg-mobile-meta md:bg-tablet-skill md:h-[148px] lg:bg-desktop-skill lg:h-[277px]  lg:bg-cover  bg-blue-50  h-[70px]"></div>
       <main>
         <div className="lg:flex">
@@ -115,40 +115,6 @@ const ProfessionalLevel: NextPage = () => {
         <div className={displaySkills === true ? "block" : "hidden"}>
           <Test2Skilss />
         </div>
-        {/* <div className="bg-mid mt-[20px]">
-          <p className="pt-[20px] pl-[50px] text-[16px]">Add Industry</p>
-          <div>
-            <div className="flex justify-between px-[50px] py-[20px]">
-              <input
-                type="text"
-                placeholder="Enter industry"
-                value={industry}
-                onChange={handleChange}
-                name="fullname"
-                className="w-[175px] py-[8px] pl-[15px] text-[12px] rounded-[25px]"
-              ></input>
-              <button
-                onClick={addIndustry}
-                className="bg-deloitteGreen flex items-center text-black text-[12px] rounded-[25px] cursor-pointer"
-              >
-                <span className="ml-[15px] mr-[3px]">Add</span>
-                <MdAddCircleOutline className="w-[20px] h-[20px] my-[5px] mr-[15px]" />
-              </button>
-            </div>
-          </div>
-        </div> */}
-
-        {/* <div>
-          {dataList.map((industry: Iindustry, key: number) => {
-            return (
-              <Industrytest2
-                key={key}
-                industry={industry}
-                completeIndustry={completeIndustry}
-              />
-            );
-          })}
-        </div> */}
       </main>
     </div>
   );

@@ -1,8 +1,8 @@
 import React, { ChangeEvent, useState } from "react";
 import { MdAddCircleOutline, MdEdit, MdDeleteForever } from "react-icons/md";
 import { data } from "../industry/test/Constant";
-import { Iindustry } from "../../../../Interfaces/Interface/interface";
-import Industrytest2 from "./Industrytest2";
+import { Iindustry } from "../../../../Interfaces/Interface/interfaceIndustry";
+import Industrytest2 from "../industry/final/Industrytest2";
 const Test2Industry = () => {
   const [industry, setIndustry] = useState<string>("");
   const [dataList, setDataList] = useState<Iindustry[]>([]);
@@ -39,13 +39,15 @@ const Test2Industry = () => {
           <p className="pt-[20px] pl-[50px] text-[20px]">
             Add new <span>{data[0].kind}</span>
           </p>
-          <div className="flex justify-between px-[50px] py-[20px] md:pt-2">
+          <form className="flex justify-between px-[50px] py-[20px] md:pt-2">
             <input
+              required
               onChange={handleChange}
               type="text"
               placeholder="Enter industry name..."
               className="w-[175px] py-[8px] pl-[15px] text-[12px] rounded-[25px] "
             />
+
             <button
               onClick={addIndustry}
               className="bg-green-700 flex items-center text-white text-[12px] rounded-[25px] cursor-pointer"
@@ -53,7 +55,7 @@ const Test2Industry = () => {
               <span className="ml-[15px] mr-[3px]">Add</span>
               <MdAddCircleOutline className="w-[20px] h-[20px] my-[5px] mr-[15px]" />
             </button>
-          </div>
+          </form>
         </div>
       </div>
 

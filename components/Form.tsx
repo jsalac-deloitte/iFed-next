@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Link from 'next/link'
 import { MdMailOutline, MdLockOutline, MdOutlineVisibilityOff, MdOutlineVisibility, MdChevronRight, MdOutlineBadge, MdOutlinePhone } from 'react-icons/md'
 
 const Form: React.FC = () => {
@@ -64,7 +65,7 @@ const Form: React.FC = () => {
                         <a href="#" className="mt-[15px] md:mt-0 italic text-white text-opacity-75 transition hover:underline">Forgot Password?</a>
                     </div>
                     <div className="md:w-[360px] flex justify-end">
-                        <button className="flex justify-center items-center mt-[30px] md:mt-[50px] w-[275px] md:w-[150px] rounded-[25px] bg-[#80B324] bg-opacity-50 transition hover:bg-opacity-100 text-[16px] text-white text-opacity-75">LOGIN <MdChevronRight className="w-[40px] h-[40px]" /></button>
+                        <button className="flex justify-center items-center mt-[30px] md:mt-[50px] w-[275px] md:w-[150px] rounded-[25px] bg-[#80B324] bg-opacity-50 transition hover:bg-opacity-100 text-[16px] text-white text-opacity-75"><Link href="/admin">LOGIN</Link><MdChevronRight className="w-[40px] h-[40px]" /></button>
                     </div>
                 </div>
             </form>

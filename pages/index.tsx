@@ -1,32 +1,22 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import AccentBar from '../components/AccentBar'
-import Form from '../components/Form'
-
-import logoDesktopTablet from '../public/assets/images/shared/deloitte-logo-desktop-tablet.png'
-import logoiFED from '../public/assets/images/logo-ifed.png'
-
+import Link from 'next/link'
+import { MdChevronLeft, MdChevronRight } from 'react-icons/md'
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-[url('../public/assets/images/background-login-register-mobile.jpg')] md:bg-[url('../public/assets/images/background-login-register-tablet.jpg')] lg:bg-[url('../public/assets/images/background-login-register-desktop-xl.jpg')] lg:bg-black bg-center lg:bg-right bg-no-repeat bg-cover h-screen flex justify-center lg:justify-between">
+    <div>
       <Head>
         <title>iFED</title>
         <meta name="description" content="Deloitte Consulting Philippines Delivery Center" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <AccentBar />
-      <div className="lg:flex flex-col items-center justify-center flex-wrap lg:w-1/3 lg:h-screen lg:bg-black hidden">
-        <Image src={logoDesktopTablet} alt="Deloitte Logo" width={235} height={52.75} />
-        <span className="mt-[50px]" ></span>
-        <Image src={logoiFED} alt="iFED Logo" width={175} height={175} />
-        <h1 className="flex justify-center text-white text-[128px] font-bold">iFED</h1>
-      </div>
-      <main className="flex justify-center items-center lg:w-2/3">
-        <Form />
+      <main className="h-screen flex justify-center items-center">
+        <div className="text-center">
+          <h1>HOMEPAGE</h1>
+          <h2>This page is currently in progress...</h2>
+          <p className="m-[25px]">Please click <button className="flex justify-center items-center mx-auto my-[5px] w-[275px] md:w-[150px] rounded-[25px] bg-[#80B324] text-[16px] text-white"><MdChevronRight className="w-[40px] h-[40px]" /><Link href="/login">HERE</Link><MdChevronLeft className="w-[40px] h-[40px]" /></button> to start</p>
+        </div>
       </main>
     </div>
   )
